@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_weight="2.5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <Spinner
+                        android:id="@+id/challenge_spiner_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="@drawable/bg_border"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Bit Amount"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="10dp" />
+
+                            <TextView
+                                android:id="@+id/challange_txt_bit_amt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3">
+
+                            <EditText
+                                android:id="@+id/challenge_edt_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableLeft="@mipmap/ic_rupee"
+                                android:hint="Enter Challenge Amount"
+                                android:inputType="phone"
+                                android:textColor="@color/color_dark"
+                                android:textSize="16sp" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/challenge_card_cricket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:visibility="gone"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_challenge_name_cricket"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Challenge Name"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/challange_text_team_title1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                                    android:text="Team 1"
+                                    android:textColor="@color/color_dark"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/btn_team_1"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                                    android:text="Team A"
+                                    android:textColor="@color/colorPrimary"/>
+
+                                <SeekBar
+                                    android:id="@+id/challenge_seek_bar_team1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                                    android:max="100"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/challange_text_team1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text=""
+                                    android:textColor="@color/color_dark"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/challenge_text_progress1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text=""
+                                    android:textColor="@color/color_dark"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/color_hash" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/challange_text_team_title2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                                    android:text="Team 2"
+                                    android:textColor="@color/color_dark"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/btn_team_2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                                    android:text="Team B"
+                                    android:textColor="@color/colorPrimary"/>
+
+                                <SeekBar
+                                    android:id="@+id/challenge_seek_bar_team2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                                    android:max="100"
+                                    />
+
+
+                                <TextView
+                                    android:id="@+id/challange_text_team2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text=""
+                                    android:textColor="@color/color_dark"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/challenge_text_progress2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text=""
+                                    android:textColor="@color/color_dark"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/challenge_card_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_challenge_name_stock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Challenge Name"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2">
+
+                            <EditText
+                                android:id="@+id/challenge_edt_enter_point"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableLeft="@mipmap/ic_stock"
+                                android:hint="Point"
+                                android:inputType="phone"
+                                android:textColor="@color/color_dark"
+                                android:textSize="16sp" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/challenge_card_instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:text="Instructions"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/challenge_txt_instruction1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:gravity="center_vertical"
+                            android:text="Instructions"
+                            android:textColor="@color/color_dark"
+                            android:textSize="16sp" />
+
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/challenge_btn_create"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_gradient_1"
+                android:text="Create Challenge"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/direct_challenge_btn_create"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_gradient_1"
+                android:text="Create Direct Challenge"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

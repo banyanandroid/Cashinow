@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HOTSHOT</string>
+
+    <!-- Font Awesome -->
+    <string name="icon_create_chellange">Create New Challenge</string>
+
+    <!-- Facebook Login -->
+    <string name="facebook_app_id">443951286065066</string>
+    <string name="fb_login_protocol_scheme">fb443951286065066</string>
+    <string name="title_activity__challenge">Activity_Challenge</string>
+
+
+</resources>

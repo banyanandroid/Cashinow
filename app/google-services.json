@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "935537442769",
+    "firebase_url": "https://cashinow-22a43.firebaseio.com",
+    "project_id": "cashinow-22a43",
+    "storage_bucket": "cashinow-22a43.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935537442769:android:9dcd6d732bfa9d5c",
+        "android_client_info": {
+          "package_name": "banyan.com.cashinow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935537442769-ud544o5fdmn0bkjfj7c5a85h6dcqchcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDORDCNi5aVh5GCOebMAJ4JA0tDqJDALfA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

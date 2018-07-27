@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ListView
+        android:id="@+id/search_result_active_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@color/color_hash"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/emptyElement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/ic_warning"
+        android:gravity="center"
+        android:text="No Challange Found"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        />
+
+</LinearLayout>
