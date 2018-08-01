@@ -605,7 +605,7 @@ public class Activity_Profile extends AppCompatActivity {
                                 .into(profile_picture);
 
 //                        set view page only after current user details updated
-                        viewPager.setAdapter(new MyAdapter(getSupportFragmentManager()));
+                        viewPager.setAdapter(new Activity_Profile.MyAdapter(getSupportFragmentManager()));
                         tabLayout.post(new Runnable() {
                             @Override
                             public void run() {
@@ -888,11 +888,13 @@ public class Activity_Profile extends AppCompatActivity {
 
 
                         try{
-                            dialog = new SpotsDialog(Activity_Profile.this);
-                            dialog.setCancelable(false);
-                            dialog.show();
+
+                            dialog_win_lose_payment = new SpotsDialog(Activity_Profile.this);
+                            dialog_win_lose_payment.setCancelable(false);
+                            dialog_win_lose_payment.show();
                             queue = Volley.newRequestQueue(Activity_Profile.this);
                             Function_Get_Profile();
+
                         }catch (Exception e){
 
                         }

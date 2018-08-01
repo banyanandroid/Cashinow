@@ -9,5 +9,6 @@
     <string name="fb_login_protocol_scheme">fb443951286065066</string>
     <string name="title_activity__challenge">Activity_Challenge</string>
 
+    <string name="default_notification_channel_id">banyan.com.cashinow.1</string>
 
 </resources>

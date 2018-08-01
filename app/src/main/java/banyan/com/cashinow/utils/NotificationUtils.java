@@ -2,6 +2,7 @@ package banyan.com.cashinow.utils;
 
 import android.app.ActivityManager;
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -70,7 +71,7 @@ public class NotificationUtils {
                 );
 
         final NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(
-                mContext);
+                mContext, mContext.getString(R.string.default_notification_channel_id));
 
         final Uri alarmSound = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
                 + "://" + mContext.getPackageName() + "/raw/notification");
@@ -111,14 +112,27 @@ public class NotificationUtils {
                 .setSmallIcon(R.mipmap.app_icon)
                 .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), icon))
                 .setContentText(message)
-                .setChannelId(title)
+                .setChannelId(mContext.getString(R.string.default_notification_channel_id))
                 .build();
 
         NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
+
+        //        code support push notification in oreo version
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+            String CHANNEL_ID = mContext.getString(R.string.default_notification_channel_id);// The id of the channel.
+            CharSequence name = title;// The user-visible name of the channel.
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, name, importance);
+            notificationManager.createNotificationChannel(mChannel);
+
+        }
+
         notificationManager.notify(Config.NOTIFICATION_ID, notification);
     }
 
     private void showBigNotification(Bitmap bitmap, NotificationCompat.Builder mBuilder, int icon, String title, String message, String timeStamp, PendingIntent resultPendingIntent, Uri alarmSound) {
+
         NotificationCompat.BigPictureStyle bigPictureStyle = new NotificationCompat.BigPictureStyle();
         bigPictureStyle.setBigContentTitle(title);
         bigPictureStyle.setSummaryText(Html.fromHtml(message).toString());
@@ -134,10 +148,22 @@ public class NotificationUtils {
                 .setSmallIcon(R.mipmap.app_icon)
                 .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), icon))
                 .setContentText(message)
-                .setChannelId(title)
+                .setChannelId(mContext.getString(R.string.default_notification_channel_id))
                 .build();
 
         NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
+
+//        code support push notification in oreo version
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+            String CHANNEL_ID = mContext.getString(R.string.default_notification_channel_id);// The id of the channel.
+            CharSequence name = title;// The user-visible name of the channel.
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, name, importance);
+            notificationManager.createNotificationChannel(mChannel);
+
+        }
+
         notificationManager.notify(Config.NOTIFICATION_ID_BIG_IMAGE, notification);
     }
 
